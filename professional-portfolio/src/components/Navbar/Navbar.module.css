@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  user-select: none;
+}
+
+.name {
+  font-size: 2vh;
+  font-weight: bolder;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
