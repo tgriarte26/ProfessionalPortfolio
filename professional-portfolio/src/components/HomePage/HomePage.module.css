@@ -1,3 +1,23 @@
+.name {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.major {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.divider {
+  margin-top: 2rem;
+}
+
+.aboutMe {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .subheader {
   font-size: 1.5rem;
   font-weight: 700;
@@ -34,4 +54,9 @@
   font-size: 1rem;
   font-weight: 500;
   user-select: none;
+}
+
+.experienceTitle {
+  font-size: 1.2rem;
+
 }
