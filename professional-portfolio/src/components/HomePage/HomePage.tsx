@@ -3,10 +3,9 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    
     <div>
       {/** About Me */}
-      <div> 
+      <div>
         <h1 className={styles.name}>Trevor Raphael Griarte</h1>
         <h2 className={styles.major}>
           Electrical Engineering & Computer Sciences (EECS) Major
@@ -18,6 +17,15 @@ export default function HomePage() {
           on software and hardware development. I build full-stack applications
           using Next.js, TypeScript, and Python.
         </p>
+      </div>
+
+      {/** Links */}
+      <div className={styles.divider}></div>
+      <div className={styles.linksContainer}>
+          <a href="https://github.com/tgriarte26">github</a>
+          <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte">linkedin</a></li>
+          <li><a href="https://www.instagram.com/trevorgriarte/">instagram</a></li>
+          <li><a href="https://www.tiktok.com/@trevorgriarte">tiktok</a></li>
       </div>
 
       <div className={styles.divider}></div>
@@ -34,14 +42,30 @@ export default function HomePage() {
                 appealing and professional README files for their Github
                 repositories.
               </p>
-              <a>
-                Github
-                <Image src="/icons/github.png" width={24} height={24} alt="Github"/>
-              </a>
-              <a>
-                Website
-              <Image src="/icons/world-wide-web.png" width={24} height={24} alt="Website"/>
-              </a>
+              <div className={styles.projectButtons}>
+                <a href="https://github.com/tgriarte26/PlsReadMe">
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Github</p>
+                    <Image
+                      src="/icons/github.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Website</p>
+                    <Image
+                      src="/icons/world-wide-web.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
             <div className={styles.card}>
               <h2 className={styles.cardTitle}>South Bay Volunteer Circle</h2>
@@ -50,14 +74,30 @@ export default function HomePage() {
                 meaningful volunteer and internship opportunities to drive
                 positive change in their communities.
               </p>
-              <a>
-                Github
-                <Image src="/icons/github.png" width={24} height={24} alt="Github"/>
-              </a>
-              <a>
-                Website
-                <Image src="/icons/world-wide-web.png" width={24} height={24} alt="Website"/>
-              </a>
+              <div className={styles.projectButtons}>
+                <a href="https://github.com/tgriarte26/south-bay-volunteer-circle">
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Github</p>
+                    <Image
+                      src="/icons/github.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+                <a href="https://southbayvolunteercircle.netlify.app/">
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Website</p>
+                    <Image
+                      src="/icons/world-wide-web.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
             <div className={styles.card}>
               <h2 className={styles.cardTitle}>StackPera</h2>
@@ -65,17 +105,51 @@ export default function HomePage() {
                 A financial tracking tool designed to help poker fnatics mangage
                 buy-ins and monitor profits.
               </p>
+              <div className={styles.projectButtons}>
+                <a href="https://github.com/tgriarte26/StackPera">
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Github</p>
+                    <Image
+                      src="/icons/github.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+                <a>
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Website</p>
+                    <Image
+                      src="/icons/world-wide-web.png"
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div className={styles.divider}></div>
 
       {/** Experience */}
       <div>
         <h1 className={styles.subheader}>Experience</h1>
-        <p className={styles.experienceTitle}>United States Youth Volleyball League</p>
+        <div className={styles.experienceContainer}>
+          <p className={styles.experienceTitle}>
+            Multimedia & Software Developer Intern
+          </p>
+          <p className={styles.experienceDate}>
+            September 2025 - Present
+          </p>
+        </div>
+        <p className={styles.experienceTitle}>
+            United States Youth Volleyball League (USYVL)
+        </p>
       </div>
     </div>
   );

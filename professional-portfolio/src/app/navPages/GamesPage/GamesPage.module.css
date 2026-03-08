@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  user-select: none;
+}
+
+.name {
+  font-size: 2vh;
+  font-weight: 800;
+  list-style: none;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  font-weight: 600;
+}
+
+.navContainer li:not(:last-child)::after {
+  content: "•";
+  margin-left: 1rem;
+  font-size: 1.4rem;
+  position: relative;
+  line-height: 0;
+  top: 1.4px;
+}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Navbar.module.css';
 
 export default function NavBar() {
@@ -5,9 +6,9 @@ export default function NavBar() {
     <div className={styles.container}>
       <li className={styles.name}><a href="/">trev.</a></li>
       <header className={styles.navContainer}>
-        <li><a href="/">home</a></li>
-        <li><a href="/creative">creating</a></li>
-        <li><a href="/games">games</a></li>
+        <li><Link href="/">home</Link></li>
+        <li><Link href="/navPages/CreatingPage">creating</Link></li>
+        <li><Link href="/navPages/GamesPage">games</Link></li>
       </header>
     </div>
   )
