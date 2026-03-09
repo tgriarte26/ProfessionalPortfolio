@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/navPages/GamesPage"  ],
+, "src/app/navPages/GamesPage", "src/app/games/PokemonTypes/PokemonTypes.js"  ],
   "exclude": ["node_modules"]
 }

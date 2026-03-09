@@ -1,0 +1,81 @@
+.page {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.card:hover {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+.projectButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 5%;
+}
+
+.projectInnerButtons {
+  display: flex;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+.projectInnerButtonsText {
+  margin-right: 0.5rem;
+}
+
+.experienceContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.experienceDate {
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+
+.linksContainer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+}
