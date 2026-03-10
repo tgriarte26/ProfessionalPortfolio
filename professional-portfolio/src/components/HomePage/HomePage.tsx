@@ -22,6 +22,10 @@ export default function HomePage() {
       {/** Links */}
       <div className={styles.divider}></div>
       <div className={styles.linksContainer}>
+          <a href="resume">resume</a>
+      </div>
+      <div className={styles.divider}></div>
+      <div className={styles.linksContainer}>
           <a href="https://github.com/tgriarte26">github</a>
           <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte">linkedin</a></li>
           <li><a href="https://www.instagram.com/trevorgriarte/">instagram</a></li>
@@ -139,6 +143,7 @@ export default function HomePage() {
       {/** Experience */}
       <div>
         <h1 className={styles.subheader}>Experience</h1>
+        <div className={styles.smallDivider}></div>
         <div className={styles.experienceContainer}>
           <p className={styles.experienceTitle}>
             Multimedia & Software Developer Intern
@@ -147,8 +152,36 @@ export default function HomePage() {
             September 2025 - Present
           </p>
         </div>
-        <p className={styles.experienceTitle}>
+        <p className={styles.experienceOrganization}>
             United States Youth Volleyball League (USYVL)
+        </p>
+
+        <div className={styles.divider}></div>
+
+        <div className={styles.experienceContainer}>
+          <p className={styles.experienceTitle}>
+            Software Developer Intern
+          </p>
+          <p className={styles.experienceDate}>
+            October 2025 - Present
+          </p>
+        </div>
+        <p className={styles.experienceOrganization}>
+            ShareVita
+        </p>
+
+        <div className={styles.divider}></div>
+
+        <div className={styles.experienceContainer}>
+          <p className={styles.experienceTitle}>
+            Academic Tutor
+          </p>
+          <p className={styles.experienceDate}>
+            August 2025 - Present
+          </p>
+        </div>
+        <p className={styles.experienceOrganization}>
+            Kumon Math And Reading Center
         </p>
       </div>
     </div>
