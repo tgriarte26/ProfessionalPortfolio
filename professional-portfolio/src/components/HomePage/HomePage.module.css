@@ -110,3 +110,30 @@
   gap: 2rem;
   font-weight: 600;
 }
+
+.resumeContainer {
+  display: inline;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.resumeContainer:hover {
+  color: white;
+  background-color: black;
+}
+
+.greatLockInHighlight {
+  color: red;
+}
+
+.greatLockInTitle {
+  color: red;
+  font-weight: 600;
+}
+
+.greatLockInDescription {
+  color: blue;
+  font-weight: 600;
+}

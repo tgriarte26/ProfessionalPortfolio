@@ -1,11 +1,26 @@
+"use client";
 import styles from "../HomePage/HomePage.module.css";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
+  const [time, setTime] = useState(new Date());
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setTime(new Date());
+    }, 1000)
+    
+    return () => {
+      clearInterval(timerId);
+    };
+  }, [])
+
   return (
     <div>
       {/** About Me */}
       <div>
+        <h2>{time.toLocaleTimeString()}</h2>
         <h1 className={styles.name}>Trevor Raphael Griarte</h1>
         <h2 className={styles.major}>
           Electrical Engineering & Computer Sciences (EECS) Major
@@ -21,15 +36,15 @@ export default function HomePage() {
 
       {/** Links */}
       <div className={styles.divider}></div>
-      <div className={styles.linksContainer}>
-          <a href="resume">resume</a>
+      <div className={styles.resumeContainer}>
+          <a href="resume">download my resume</a>
       </div>
       <div className={styles.divider}></div>
       <div className={styles.linksContainer}>
           <a href="https://github.com/tgriarte26">github</a>
           <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte">linkedin</a></li>
           <li><a href="https://www.instagram.com/trevorgriarte/">instagram</a></li>
-          <li><a href="https://www.tiktok.com/@trevorgriarte">tiktok</a></li>
+          <li><a href="https://www.tiktok.com/@trevorgriarte" className={styles.greatLockInHighlight}>tiktok (THE GREAT LOCK IN SERIES)</a></li>
       </div>
 
       <div className={styles.divider}></div>
