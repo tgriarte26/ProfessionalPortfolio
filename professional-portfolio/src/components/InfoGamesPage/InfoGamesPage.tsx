@@ -11,7 +11,10 @@ export default function InfoGamesPage() {
             <h2 className={styles.cardTitle}>Pokémon Types</h2>
           </div>
           <div className={styles.card}>
-            <h2 className={styles.cardTitle}>Pokémon Higher or Lower</h2>
+            <h2 className={styles.cardTitle}>Pokémon Higher or Lower Stats</h2>
+          </div>
+          <div className={styles.card}>
+            <h2 className={styles.cardTitle}>Wordle</h2>
           </div>
         </div>
       </div>

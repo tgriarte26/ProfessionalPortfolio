@@ -3,8 +3,10 @@ import styles from "../HomePage/HomePage.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+
 export default function HomePage() {
   const [time, setTime] = useState(new Date());
+  const [day, setDay] = useState(38);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -16,11 +18,31 @@ export default function HomePage() {
     };
   }, [])
 
+
+  function oneDayPassed() {
+    let date = new Date().toLocaleDateString();
+
+    if (localStorage.getItem("app_date") == date) {
+      return false;
+    }
+
+    localStorage.setItem("app_date", date);
+    return true;
+  }
+
+  function runOncePerDay() {
+    if (!oneDayPassed()) return false;
+    setDay(day + 1);
+  }
+  useEffect(() => {
+    runOncePerDay();
+    runOncePerDay();
+  }, [])
+
   return (
     <div>
       {/** About Me */}
       <div>
-        <h2>{time.toLocaleTimeString()}</h2>
         <h1 className={styles.name}>Trevor Raphael Griarte</h1>
         <h2 className={styles.major}>
           Electrical Engineering & Computer Sciences (EECS) Major
@@ -41,10 +63,10 @@ export default function HomePage() {
       </div>
       <div className={styles.divider}></div>
       <div className={styles.linksContainer}>
-          <a href="https://github.com/tgriarte26">github</a>
-          <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte">linkedin</a></li>
-          <li><a href="https://www.instagram.com/trevorgriarte/">instagram</a></li>
-          <li><a href="https://www.tiktok.com/@trevorgriarte" className={styles.greatLockInHighlight}>tiktok (THE GREAT LOCK IN SERIES)</a></li>
+          <a href="https://github.com/tgriarte26" target="_blank">github</a>
+          <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte" target="_blank">linkedin</a></li>
+          <li><a href="https://www.instagram.com/trevorgriarte/" target="_blank">instagram</a></li>
+          <li><a href="https://www.tiktok.com/@trevorgriarte" target="_blank" className={styles.greatLockInHighlight}>tiktok - the great lock in series: day {39}</a></li>
       </div>
 
       <div className={styles.divider}></div>
@@ -198,6 +220,21 @@ export default function HomePage() {
         <p className={styles.experienceOrganization}>
             Kumon Math And Reading Center
         </p>
+
+        <div className={styles.divider}></div>
+
+        <div className={styles.experienceContainer}>
+          <p className={styles.experienceTitle}>
+            Head of Scratch & JavaScript Curriculum
+          </p>
+          <p className={styles.experienceDate}>
+            May 2024 - Present
+          </p>
+        </div>
+        <p className={styles.experienceOrganization}>
+            STEM For Others
+        </p>
+
       </div>
     </div>
   );
