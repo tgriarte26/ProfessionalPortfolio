@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [time, setTime] = useState(new Date());
-  const [day, setDay] = useState(38);
+  const [day, setDay] = useState(40);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -34,6 +34,7 @@ export default function HomePage() {
     if (!oneDayPassed()) return false;
     setDay(day + 1);
   }
+
   useEffect(() => {
     runOncePerDay();
     runOncePerDay();
@@ -66,7 +67,7 @@ export default function HomePage() {
           <a href="https://github.com/tgriarte26" target="_blank">github</a>
           <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte" target="_blank">linkedin</a></li>
           <li><a href="https://www.instagram.com/trevorgriarte/" target="_blank">instagram</a></li>
-          <li><a href="https://www.tiktok.com/@trevorgriarte" target="_blank" className={styles.greatLockInHighlight}>tiktok - the great lock in series: day {39}</a></li>
+          <li><a href="https://www.tiktok.com/@trevorgriarte" target="_blank" className={styles.greatLockInHighlight}>tiktok - the great lock in series: day {day}</a></li>
       </div>
 
       <div className={styles.divider}></div>
@@ -141,13 +142,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className={styles.card}>
-              <h2 className={styles.cardTitle}>StackPera</h2>
+              <h2 className={styles.cardTitle}>CCorithm</h2>
               <p className={styles.cardDescription}>
-                A financial tracking tool designed to help poker fnatics mangage
-                buy-ins and monitor profits.
+                A high-quality transfer guide for community college students who plan to transfer to a four-year university.
               </p>
               <div className={styles.projectButtons}>
-                <a href="https://github.com/tgriarte26/StackPera">
+                <a href="https://github.com/tgriarte26/Ccorithm">
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Github</p>
                     <Image
