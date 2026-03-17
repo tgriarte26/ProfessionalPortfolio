@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [time, setTime] = useState(new Date());
-  const [day, setDay] = useState(40);
+  const [day, setDay] = useState(43);
+  const [hovered, setHovered] = useState<string | null>(null);
 
   useEffect(() => {
     const timerId = setInterval(() => {
@@ -41,7 +42,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div>
+    <div className={styles.container}>
       {/** About Me */}
       <div>
         <h1 className={styles.name}>Trevor Raphael Griarte</h1>
@@ -62,13 +63,18 @@ export default function HomePage() {
       <div className={styles.resumeContainer}>
           <a href="resume">download my resume</a>
       </div>
-      <div className={styles.divider}></div>
+      <div className={styles.bigDivider}></div>
+
       <div className={styles.linksContainer}>
           <a href="https://github.com/tgriarte26" target="_blank">github</a>
           <li><a href="https://www.linkedin.com/in/trevor-raphael-griarte" target="_blank">linkedin</a></li>
           <li><a href="https://www.instagram.com/trevorgriarte/" target="_blank">instagram</a></li>
-          <li><a href="https://www.tiktok.com/@trevorgriarte" target="_blank" className={styles.greatLockInHighlight}>tiktok - the great lock in series: day {day}</a></li>
+          <li><a href="https://www.tiktok.com/@trevorgriarte" target="_blank">tiktok</a></li>
       </div>
+
+      <div className={styles.smallDivider}></div>
+
+      <h2 className={styles.greatLockInHighlight}>tiktok → the great lock in series: day {day}</h2>
 
       <div className={styles.divider}></div>
 
@@ -85,25 +91,25 @@ export default function HomePage() {
                 repositories.
               </p>
               <div className={styles.projectButtons}>
-                <a href="https://github.com/tgriarte26/PlsReadMe">
+                <a href="https://github.com/tgriarte26/PlsReadMe" target="_blank" onMouseEnter={() => setHovered("github1")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Github</p>
                     <Image
-                      src="/icons/github.png"
+                      src={hovered === "github1" ? "/icons/github-white.png" : "/icons/github.png"}
                       width={24}
                       height={24}
                       alt="Github"
                     />
                   </div>
                 </a>
-                <a>
+                <a href="https://pls-read-me.vercel.app/" target="_blank" onMouseEnter={() => setHovered("website1")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Website</p>
                     <Image
-                      src="/icons/world-wide-web.png"
+                      src={hovered === "website1" ? "/icons/world-wide-web-white.png" : "/icons/world-wide-web.png"}
                       width={24}
                       height={24}
-                      alt="Github"
+                      alt="Website"
                     />
                   </div>
                 </a>
@@ -117,25 +123,25 @@ export default function HomePage() {
                 positive change in their communities.
               </p>
               <div className={styles.projectButtons}>
-                <a href="https://github.com/tgriarte26/south-bay-volunteer-circle">
+                <a href="https://github.com/tgriarte26/south-bay-volunteer-circle" target="_blank" onMouseEnter={() => setHovered("github2")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Github</p>
                     <Image
-                      src="/icons/github.png"
+                      src={hovered === "github2" ? "/icons/github-white.png" : "/icons/github.png"}
                       width={24}
                       height={24}
                       alt="Github"
                     />
                   </div>
                 </a>
-                <a href="https://southbayvolunteercircle.netlify.app/">
+                <a href="https://southbayvolunteercircle.netlify.app/" target="_blank" onMouseEnter={() => setHovered("website2")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Website</p>
                     <Image
-                      src="/icons/world-wide-web.png"
+                      src={hovered === "website2" ? "/icons/world-wide-web-white.png" : "/icons/world-wide-web.png"}
                       width={24}
                       height={24}
-                      alt="Github"
+                      alt="Website"
                     />
                   </div>
                 </a>
@@ -147,25 +153,25 @@ export default function HomePage() {
                 A high-quality transfer guide for community college students who plan to transfer to a four-year university.
               </p>
               <div className={styles.projectButtons}>
-                <a href="https://github.com/tgriarte26/Ccorithm">
+                <a href="https://github.com/tgriarte26/Ccorithm" target="_blank" onMouseEnter={() => setHovered("github3")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Github</p>
                     <Image
-                      src="/icons/github.png"
+                      src={hovered === "github3" ? "/icons/github-white.png" : "/icons/github.png"}
                       width={24}
                       height={24}
                       alt="Github"
                     />
                   </div>
                 </a>
-                <a>
+                <a onMouseEnter={() => setHovered("website3")} onMouseLeave={() => setHovered(null)}>
                   <div className={styles.projectInnerButtons}>
                     <p className={styles.projectInnerButtonsText}>Website</p>
                     <Image
-                      src="/icons/world-wide-web.png"
+                      src={hovered === "website3" ? "/icons/world-wide-web-white.png" : "/icons/world-wide-web.png"}
                       width={24}
                       height={24}
-                      alt="Github"
+                      alt="Website"
                     />
                   </div>
                 </a>
