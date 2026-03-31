@@ -88,3 +88,11 @@
 .pokemonTypeBattleContainer:hover {
   color: #ff4d4d;
 }
+
+.spendTheBudgetContainer{
+  background-color: #85bb65;
+}
+
+.spendTheBudgetContainer:hover {
+  color: #85bb65;
+}

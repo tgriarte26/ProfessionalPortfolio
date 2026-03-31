@@ -5,41 +5,12 @@ import { useState, useEffect } from "react";
 
 
 export default function HomePage() {
-  const [time, setTime] = useState(new Date());
-  const [day, setDay] = useState(43);
   const [hovered, setHovered] = useState<string | null>(null);
-
-  useEffect(() => {
-    const timerId = setInterval(() => {
-      setTime(new Date());
-    }, 1000)
-    
-    return () => {
-      clearInterval(timerId);
-    };
-  }, [])
-
-
-  function oneDayPassed() {
-    let date = new Date().toLocaleDateString();
-
-    if (localStorage.getItem("app_date") == date) {
-      return false;
-    }
-
-    localStorage.setItem("app_date", date);
-    return true;
-  }
-
-  function runOncePerDay() {
-    if (!oneDayPassed()) return false;
-    setDay(day + 1);
-  }
-
-  useEffect(() => {
-    runOncePerDay();
-    runOncePerDay();
-  }, [])
+  let initialDate = new Date(2026, 1, 2).getTime(); 
+  let dateNow = Date.now();
+  const difference = dateNow - initialDate;
+  const millisecondsPerDay = 24 * 60 * 60 * 1000; // 24 hours, 60 mins, 60 secs, 1000 ms
+  let daysSince = Math.floor(difference / millisecondsPerDay);
 
   return (
     <div className={styles.container}>
@@ -74,7 +45,7 @@ export default function HomePage() {
 
       <div className={styles.smallDivider}></div>
 
-      <h2 className={styles.greatLockInHighlight}>tiktok → the great lock in series: day {day}</h2>
+      <h2 className={styles.greatLockInHighlight}>tiktok → the great lock in series: day {daysSince}</h2>
 
       <div className={styles.divider}></div>
 

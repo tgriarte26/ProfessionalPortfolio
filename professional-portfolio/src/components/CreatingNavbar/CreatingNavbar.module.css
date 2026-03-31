@@ -1,0 +1,31 @@
+.page {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.button {
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: -2px 2px;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+}
