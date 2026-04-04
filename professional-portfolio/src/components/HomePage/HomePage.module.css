@@ -73,7 +73,12 @@
 .experienceOrganization {
   font-size: 1rem;
   font-weight: 700;
-  color: rgb(101, 149, 240);
+  color: #4285F4;
+}
+
+.experienceOrganization:hover {
+  text-decoration: underline;
+  color: #0452d0;
 }
 
 .projectButtons {
@@ -86,19 +91,25 @@
 .projectInnerButtons {
   display: flex;
   font-weight: bold;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 2rem;
   padding: 0.5rem;
   box-shadow: 3px 3px;
 }
 
 .projectInnerButtons:hover {
-  background-color: black;
+  background-color: #5065a4;
   color: white;
 }
 
 .projectInnerButtonsText {
   margin-right: 0.5rem;
+}
+
+.experienceCard {
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  box-shadow: -5px 5px;
 }
 
 .experienceContainer {
@@ -118,18 +129,35 @@
   font-weight: 600;
 }
 
+.socialsImage {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.linksButton {
+  display: inline-block;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  box-shadow: 2px 2px;
+}
+
+.linksButton:hover {
+  color: white;
+  background-color: black;
+}
+
 .resumeContainer {
   display: inline;
   padding: 0.5rem 1rem;
   font-weight: 600;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 1rem;
   box-shadow: 5px 5px;
 }
 
 .resumeContainer:hover {
   color: white;
-  background-color: black;
+  background-color: #5065a4;
 }
 
 .greatLockInHighlight {
