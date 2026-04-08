@@ -31,7 +31,7 @@ export default function HomePage() {
       {/** Links */}
       <div className={styles.divider}></div>
       <div className={styles.resumeContainer}>
-        <a href="resume">download my resume</a>
+        <a href="/resume/First-Year Full Resume Final.pdf" download>download my resume</a>
       </div>
       <div className={styles.bigDivider}></div>
       <h1 className={styles.subheader}>Socials</h1>
@@ -62,12 +62,12 @@ export default function HomePage() {
         onMouseEnter={() => setHovered("social2")}
         onMouseLeave={() => setHovered(null)}>
           <div className={styles.linksButton}>
-            github
+            linkedin
             <Image
               src={
                 hovered === "social2"
-                  ? "/icons/github-white.png"
-                  : "/icons/github.png"
+                  ? "/icons/linkedin-white.png"
+                  : "/icons/linkedin.png"
               }
               width={25}
               height={25}
@@ -78,14 +78,44 @@ export default function HomePage() {
         </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/trevorgriarte/" target="_blank">
-            <div className={styles.linksButton}>instagram</div>
-          </a>
+          <a href="https://www.instagram.com/trevorgriarte/" target="_blank"
+        onMouseEnter={() => setHovered("social3")}
+        onMouseLeave={() => setHovered(null)}>
+          <div className={styles.linksButton}>
+            instagram
+            <Image
+              src={
+                hovered === "social3"
+                  ? "/icons/instagram-white.png"
+                  : "/icons/instagram.png"
+              }
+              width={25}
+              height={25}
+              alt="Website"
+              className={styles.socialsImage}
+            />
+          </div>
+        </a>
         </li>
         <li>
-          <a href="https://www.tiktok.com/@trevorgriarte" target="_blank">
-            <div className={styles.linksButton}>tiktok</div>
-          </a>
+          <a href="https://www.tiktok.com/@trevorgriarte" target="_blank"
+        onMouseEnter={() => setHovered("social4")}
+        onMouseLeave={() => setHovered(null)}>
+          <div className={styles.linksButton} >
+            tiktok
+            <Image
+              src={
+                hovered === "social4"
+                  ? "/icons/tiktok-white.png"
+                  : "/icons/tiktok.png"
+              }
+              width={25}
+              height={25}
+              alt="Website"
+              className={styles.socialsImage}
+            />
+          </div>
+        </a>
         </li>
       </div>
 

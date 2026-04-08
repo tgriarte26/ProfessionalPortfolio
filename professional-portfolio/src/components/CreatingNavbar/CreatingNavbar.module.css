@@ -29,3 +29,125 @@
   background-color: black;
   color: white;
 }
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+.major {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.divider {
+  margin-top: 2rem;
+}
+
+.smallDivider {
+  margin-top: 1rem;
+}
+
+.bigDivider {
+  margin-top: 3rem;
+}
+
+.aboutMe {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.subheader {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page {
+  width: 100%;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 10px 10px
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+.experienceTitle {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.experienceOrganization {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4285F4;
+}
+
+.experienceOrganization:hover {
+  text-decoration: underline;
+  color: #0452d0;
+}
+
+.projectButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.projectInnerButtons {
+  display: flex;
+  font-weight: bold;
+  border: 3px solid black;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  box-shadow: 3px 3px;
+}
+
+.projectInnerButtons:hover {
+  background-color: #5065a4;
+  color: white;
+}
+
+.projectInnerButtonsText {
+  margin-right: 0.5rem;
+}
+
+.videoCard {
+  display: flex;
+  flex-direction: column;
+  border: 5px dashed black;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+}

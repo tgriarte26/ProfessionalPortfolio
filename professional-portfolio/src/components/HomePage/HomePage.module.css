@@ -132,6 +132,7 @@
 .socialsImage {
   display: inline-block;
   margin-left: 0.5rem;
+  margin-bottom: 1px;
 }
 
 .linksButton {
