@@ -18,29 +18,9 @@ export default function CreatingNavBar() {
         {active === "video" && <div>
         <div className={styles.page}>
           <div className={styles.cardContainer}>
-            <div className={styles.card}>
-              <h2 className={styles.cardTitle}>bball highlights</h2>
-              <video controls className={styles.videoCard}>
-                <source src="/videos/bball-highlights.mp4" type="video/mp4"/>
-              </video>
-              <p className={styles.cardDescription}>
-                Basketball at Sur La Brea Park
-              </p>
-              <div className={styles.projectButtons}>
-                <a
-                  href="https://github.com/tgriarte26/PlsReadMe"
-                  target="_blank"
-                  onMouseEnter={() => setHovered("github1")}
-                  onMouseLeave={() => setHovered(null)}
-                >
-                </a>
-              </div>
-            </div>
-            <div className={styles.card}>
+            <div className={`${styles.videoEditingCard}`}>
               <h2 className={styles.cardTitle}>The Story of Rama</h2>
-              <video controls className={styles.videoCard}>
-                <source src="/videos/thestoryoframa.mp4" type="video/mp4"/>
-              </video>
+                <iframe className={styles.videoCard}src="https://www.youtube.com/embed/iUoPTzBBO0c?si=bb_53hJvUFiPDOWd" height="300" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               <p className={styles.cardDescription}>
                 Senior Theology project recorded at Sur La Brea Park
               </p>
@@ -53,6 +33,13 @@ export default function CreatingNavBar() {
                 >
                 </a>
               </div>
+            </div>
+            <div className={styles.videoEditingCard}>
+              <h2 className={styles.cardTitle}>USYVL Promotion Video</h2>
+              <iframe className={styles.videoCard} height="300" src="https://www.youtube.com/embed/5ipoepRYYEw?si=02ZSyHHHJ5LMs7Z2" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className={styles.cardDescription}>
+                Created this video for the USYVL organization
+              </p>
             </div>
           </div>
         </div>

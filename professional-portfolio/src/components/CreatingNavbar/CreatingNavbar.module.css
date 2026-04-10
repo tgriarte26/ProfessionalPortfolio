@@ -1,5 +1,8 @@
 .page {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
@@ -68,25 +71,33 @@
   font-weight: 700;
 }
 
-.page {
-  width: 100%;
-}
-
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+  max-width: 1200px;
+  width: 150%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   border: 2px solid black;
+  margin: 1rem 1rem 0 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 10px 10px;
+}
+
+.videoEditingCard {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff0034;
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
-  box-shadow: 10px 10px
+  box-shadow: 10px 10px #ff0034;
 }
 
 .cardTitle {
@@ -102,26 +113,10 @@
   user-select: none;
 }
 
-.experienceTitle {
-  font-size: 1.2rem;
-  font-weight: 900;
-}
-
-.experienceOrganization {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #4285F4;
-}
-
-.experienceOrganization:hover {
-  text-decoration: underline;
-  color: #0452d0;
-}
 
 .projectButtons {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
 }
 
 .projectInnerButtons {
