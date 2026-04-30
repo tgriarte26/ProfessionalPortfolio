@@ -281,36 +281,6 @@ export default function HomePage() {
                 </a>
               </div>
             </div>
-            <div className={styles.card}>
-              <h2 className={styles.cardTitle}>Super Auto Pets Catalog</h2>
-              <p className={styles.cardDescription}>
-                An organized catalog of characters or "pets" from the popular game called Super Auto Pets.
-              </p>
-              <div className={styles.projectButtons}>
-                <a href="https://github.com/tgriarte26/SuperAutoPetsCatalog" target="_blank" onMouseEnter={() => setHovered("github4")} onMouseLeave={() => setHovered(null)}>
-                  <div className={styles.projectInnerButtons}>
-                    <p className={styles.projectInnerButtonsText}>Github</p>
-                    <Image
-                      src={hovered === "github4" ? "/icons/github-white.png" : "/icons/github.png"}
-                      width={24}
-                      height={24}
-                      alt="Github"
-                    />
-                  </div>
-                </a>
-                <a href="https://tgriarte26.github.io/SuperAutoPetsCatalog/" onMouseEnter={() => setHovered("website4")} onMouseLeave={() => setHovered(null)}>
-                  <div className={styles.projectInnerButtons}>
-                    <p className={styles.projectInnerButtonsText}>Website</p>
-                    <Image
-                      src={hovered === "website4" ? "/icons/world-wide-web-white.png" : "/icons/world-wide-web.png"}
-                      width={24}
-                      height={24}
-                      alt="Website"
-                    />
-                  </div>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
