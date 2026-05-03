@@ -100,6 +100,17 @@
   box-shadow: 10px 10px #ff0034;
 }
 
+.electronicsCard {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ffad00;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 10px 10px #ffad00;
+}
+
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 700;
@@ -145,4 +156,12 @@
   padding: 1rem;
   border-radius: 2rem;
   text-align: center;
+}
+
+.arduinoImage {
+  display: flex;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
 }

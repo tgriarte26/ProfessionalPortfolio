@@ -31,16 +31,21 @@ export default function HomePage() {
       {/** Links */}
       <div className={styles.divider}></div>
       <div className={styles.resumeContainer}>
-        <a href="/resume/First-Year Full Resume Final.pdf" download>download my resume</a>
+        <a href="/resume/First-Year Full Resume Final.pdf" download>
+          download my resume
+        </a>
       </div>
       <div className={styles.bigDivider}></div>
       <h1 className={styles.subheader}>Socials</h1>
       <div className={styles.smallDivider}></div>
 
       <div className={styles.linksContainer}>
-        <a href="https://github.com/tgriarte26" target="_blank"
-        onMouseEnter={() => setHovered("social1")}
-        onMouseLeave={() => setHovered(null)}>
+        <a
+          href="https://github.com/tgriarte26"
+          target="_blank"
+          onMouseEnter={() => setHovered("social1")}
+          onMouseLeave={() => setHovered(null)}
+        >
           <div className={styles.linksButton}>
             github
             <Image
@@ -58,64 +63,73 @@ export default function HomePage() {
         </a>
 
         <li>
-          <a href="https://www.linkedin.com/in/trevor-raphael-griarte/" target="_blank"
-        onMouseEnter={() => setHovered("social2")}
-        onMouseLeave={() => setHovered(null)}>
-          <div className={styles.linksButton}>
-            linkedin
-            <Image
-              src={
-                hovered === "social2"
-                  ? "/icons/linkedin-white.png"
-                  : "/icons/linkedin.png"
-              }
-              width={25}
-              height={25}
-              alt="Website"
-              className={styles.socialsImage}
-            />
-          </div>
-        </a>
+          <a
+            href="https://www.linkedin.com/in/trevor-raphael-griarte/"
+            target="_blank"
+            onMouseEnter={() => setHovered("social2")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            <div className={styles.linksButton}>
+              linkedin
+              <Image
+                src={
+                  hovered === "social2"
+                    ? "/icons/linkedin-white.png"
+                    : "/icons/linkedin.png"
+                }
+                width={25}
+                height={25}
+                alt="Website"
+                className={styles.socialsImage}
+              />
+            </div>
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/trevorgriarte/" target="_blank"
-        onMouseEnter={() => setHovered("social3")}
-        onMouseLeave={() => setHovered(null)}>
-          <div className={styles.linksButton}>
-            instagram
-            <Image
-              src={
-                hovered === "social3"
-                  ? "/icons/instagram-white.png"
-                  : "/icons/instagram.png"
-              }
-              width={25}
-              height={25}
-              alt="Website"
-              className={styles.socialsImage}
-            />
-          </div>
-        </a>
+          <a
+            href="https://www.instagram.com/trevorgriarte/"
+            target="_blank"
+            onMouseEnter={() => setHovered("social3")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            <div className={styles.linksButton}>
+              instagram
+              <Image
+                src={
+                  hovered === "social3"
+                    ? "/icons/instagram-white.png"
+                    : "/icons/instagram.png"
+                }
+                width={25}
+                height={25}
+                alt="Website"
+                className={styles.socialsImage}
+              />
+            </div>
+          </a>
         </li>
         <li>
-          <a href="https://www.tiktok.com/@trevorgriarte" target="_blank"
-        onMouseEnter={() => setHovered("social4")}
-        onMouseLeave={() => setHovered(null)}>
-          <div className={styles.linksButton} >
-            tiktok
-            <Image
-              src={
-                hovered === "social4"
-                  ? "/icons/tiktok-white.png"
-                  : "/icons/tiktok.png"
-              }
-              width={25}
-              height={25}
-              alt="Website"
-              className={styles.socialsImage}
-            />
-          </div>
-        </a>
+          <a
+            href="https://www.tiktok.com/@trevorgriarte"
+            target="_blank"
+            onMouseEnter={() => setHovered("social4")}
+            onMouseLeave={() => setHovered(null)}
+          >
+            <div className={styles.linksButton}>
+              tiktok
+              <Image
+                src={
+                  hovered === "social4"
+                    ? "/icons/tiktok-white.png"
+                    : "/icons/tiktok.png"
+                }
+                width={25}
+                height={25}
+                alt="Website"
+                className={styles.socialsImage}
+              />
+            </div>
+          </a>
         </li>
       </div>
 
@@ -270,6 +284,54 @@ export default function HomePage() {
                     <Image
                       src={
                         hovered === "website3"
+                          ? "/icons/world-wide-web-white.png"
+                          : "/icons/world-wide-web.png"
+                      }
+                      width={24}
+                      height={24}
+                      alt="Website"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className={styles.card}>
+              <h2 className={styles.cardTitle}>Super Auto Pets Catalog</h2>
+              <p className={styles.cardDescription}>
+                A well-organized catalog of characters or "pets" from the popular game known as Super Auto Pets.
+              </p>
+              <div className={styles.projectButtons}>
+                <a
+                  href="https://github.com/tgriarte26/SuperAutoPetsCatalog"
+                  target="_blank"
+                  onMouseEnter={() => setHovered("github4")}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Github</p>
+                    <Image
+                      src={
+                        hovered === "github4"
+                          ? "/icons/github-white.png"
+                          : "/icons/github.png"
+                      }
+                      width={24}
+                      height={24}
+                      alt="Github"
+                    />
+                  </div>
+                </a>
+                <a
+                  href="https://tgriarte26.github.io/SuperAutoPetsCatalog"
+                  target="_blank"
+                  onMouseEnter={() => setHovered("website4")}
+                  onMouseLeave={() => setHovered(null)}
+                >
+                  <div className={styles.projectInnerButtons}>
+                    <p className={styles.projectInnerButtonsText}>Website</p>
+                    <Image
+                      src={
+                        hovered === "website4"
                           ? "/icons/world-wide-web-white.png"
                           : "/icons/world-wide-web.png"
                       }
